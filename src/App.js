@@ -9,7 +9,7 @@ import {
     useRouteMatch
 } from "react-router-dom";
 import Best from "./Best";
-import List from "./Genres";
+import Genres from "./Genres";
 import Home from "./Home";
 import theMovieDb from "./themoviedb";
 
@@ -63,7 +63,7 @@ class App extends React.Component {
                             <Home />
                         </Route>
                         <Route path="/genres">
-                            <List />
+                            <Genres />
                         </Route>
                         <Route path="/best">
                             <Best />

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915c0166-06fb-4c99-b2d9-8cb2b24b2aa2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Genre.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Best.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Best.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Genres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Genres.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themoviedb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themoviedb.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578681873997</updated>
-      <workItem from="1578681875867" duration="30234000" />
+      <workItem from="1578681875867" duration="52321000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 import React from "react";
 import theMovieDb from "./themoviedb";
 
+
 class Home extends React.Component {
 
     constructor(props) {
@@ -9,6 +10,7 @@ class Home extends React.Component {
             movieId: '550',
             movie: {},
             movies: [],
+            isFetching: true
         };
     }
 
@@ -29,7 +31,10 @@ class Home extends React.Component {
                 return response.json();
             })
             .then((data) => {
-                this.setState({movie: data})
+                this.setState({
+                    movie: data,
+                    isFetching: false
+                })
                 console.log('movie title ' + data.title)
             })
             .catch(function (error) {
@@ -39,32 +44,34 @@ class Home extends React.Component {
     }
 
     render() {
-        console.log(this.state.movieId)
-        return (
-            <div>
-                <br/>
-                <main role="main">
-                    <div className="jumbotron">
-                        <div className="container">
-                            <h1 className="display-3">Hey ! Let's watch a random movie :</h1>
-                            <br/>
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <img src={theMovieDb.images_uri + 'w342/' + this.state.movie.poster_path} alt="/342x513.jpg"/>
-                                </div>
-                                <div className="col-md-8">
-                                    <h3 className="display-4">{this.state.movie.title}</h3>
-                                    <p>{this.state.movie.overview}</p>
-                                    <p><a className="btn btn-primary btn-lg"
-                                          href={"https://www.themoviedb.org/movie/" + this.state.movie.id}
-                                          target="_blank" role="button">Learn more &raquo;</a></p>
+        if (this.state.isFetching) return null;
+        else
+            return (
+                <div>
+                    <br/>
+                    <main role="main">
+                        <div className="jumbotron">
+                            <div className="container">
+                                <h1 className="display-3">Hey ! Let's watch a random movie :</h1>
+                                <br/>
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <img src={theMovieDb.images_uri + 'w342/' + this.state.movie.poster_path}
+                                             alt="No poster found"/>
+                                    </div>
+                                    <div className="col-md-8">
+                                        <h3 className="display-4">{this.state.movie.title}</h3>
+                                        <p>{this.state.movie.overview}</p>
+                                        <p><a className="btn btn-primary btn-lg"
+                                              href={"https://www.themoviedb.org/movie/" + this.state.movie.id}
+                                              target="_blank" role="button">Learn more &raquo;</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            </div>
-        )
+                    </main>
+                </div>
+            )
     }
 }
 

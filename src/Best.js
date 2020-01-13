@@ -28,11 +28,11 @@ class Best extends React.Component {
                 <main role="main">
                     <div className="jumbotron">
                         <div className="container">
-                            <h1 className="display-3">Hey ! Let's watch a random movie :</h1>
+                            <h1 className="display-3">Hey ! Let's watch the best movie :</h1>
                             <br/>
                             <div className="row">
                                 <div className="col-md-4">
-                                    <img src={theMovieDb.images_uri + 'w342/' + this.state.movie.poster_path} alt="/342x513.jpg"/>
+                                    <img src={theMovieDb.images_uri + 'w342/' + this.state.movie.poster_path} alt="No poster found"/>
                                 </div>
                                 <div className="col-md-8">
                                     <h3 className="display-4">{this.state.movie.title}</h3>

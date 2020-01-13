@@ -3,7 +3,13 @@ const theMovieDb = {
   base_uri: "http://api.themoviedb.org/3/movie/",
   images_uri: "http://image.tmdb.org/t/p/",
   timeout: 5000,
-  language: "en-US"
+  language: "en-US",
+  genres: {
+    28: "Action",
+    35: "Comedy",
+    18: "Drama",
+    878: "Science-Fiction"
+  }
 };
 
 export default theMovieDb;
