@@ -16,7 +16,6 @@ class Best extends React.Component {
             .then((res) => res.json())
             .then((data) => {
                 this.setState({
-                    movieId: data.id,
                     movie: data
                 });
             });
@@ -25,48 +24,26 @@ class Best extends React.Component {
     render() {
         return (
             <div>
+                <br/>
                 <main role="main">
-
                     <div className="jumbotron">
                         <div className="container">
-                            <h1 className="display-3">Hello, world!</h1>
-                            <p>This is a template for a simple marketing or informational website. It includes a large
-                                callout called a jumbotron and three supporting pieces of content. Use it as a starting
-                                point to create something more unique.</p>
-                            <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-                        </div>
-                    </div>
-
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
-                                    commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                                <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                            </div>
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
-                                    commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                                <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                            </div>
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus
-                                    commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-                                    risus.</p>
-                                <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                            <h1 className="display-3">Hey ! Let's watch a random movie :</h1>
+                            <br/>
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <img src={theMovieDb.images_uri + 'w342/' + this.state.movie.poster_path} alt="/342x513.jpg"/>
+                                </div>
+                                <div className="col-md-8">
+                                    <h3 className="display-4">{this.state.movie.title}</h3>
+                                    <p>{this.state.movie.overview}</p>
+                                    <p><a className="btn btn-primary btn-lg"
+                                          href={"https://www.themoviedb.org/movie/" + this.state.movie.id}
+                                          target="_blank" role="button">Learn more &raquo;</a></p>
+                                </div>
                             </div>
                         </div>
-
-                        <hr/>
-
                     </div>
-
                 </main>
             </div>
         )
