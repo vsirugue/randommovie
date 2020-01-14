@@ -8,10 +8,11 @@ import {
     useParams,
     useRouteMatch
 } from "react-router-dom";
-import Best from "./Best";
-import Genres from "./Genres";
-import Home from "./Home";
-import theMovieDb from "./themoviedb";
+import Best from "./components/Best";
+import Genres from "./components/Genres";
+import Home from "./components/Home";
+import theMovieDb from "./api/themoviedb";
+import MovieList from "./components/MovieList";
 
 class App extends React.Component {
 
@@ -53,6 +54,9 @@ class App extends React.Component {
                                     <Link class="nav-link" to="/genres">Genres</Link>
                                 </li>
                                 <li className="nav-item">
+                                    <Link class="nav-link" to="/list">Make a list</Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link class="nav-link" to="/best">The Best Movie</Link>
                                 </li>
                             </ul>
@@ -67,6 +71,9 @@ class App extends React.Component {
                         </Route>
                         <Route path="/best">
                             <Best />
+                        </Route>
+                        <Route path="/list">
+                            <MovieList />
                         </Route>
                     </Switch>
                 </div>

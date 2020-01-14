@@ -3,7 +3,7 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-import theMovieDb from "./themoviedb";
+import theMovieDb from "../api/themoviedb";
 import Genre from "./Genre";
 
 //const Genre = ({ match }) => <p>{match.params.id}</p>

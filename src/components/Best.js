@@ -1,5 +1,5 @@
 import React from "react";
-import theMovieDb from "./themoviedb";
+import theMovieDb from "../api/themoviedb";
 
 class Best extends React.Component {
     constructor(props) {

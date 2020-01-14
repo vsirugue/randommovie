@@ -1,5 +1,5 @@
 import React from "react";
-import theMovieDb from "./themoviedb";
+import theMovieDb from "../api/themoviedb";
 
 class Genre extends React.Component {
     constructor(props) {
